@@ -1,4 +1,4 @@
-# webpack-build-analyzer
+# webpack-build-profile
 
 ## Overview
-A Webpack Plugin for getting useful statistics and analysis of your build, with threshold and failure options.
+A Webpack plugin for getting useful statistics and analysis of your build, with threshold and failure options.
