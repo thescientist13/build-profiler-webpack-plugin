@@ -28,15 +28,14 @@ CSS: 0.2MB
 Images: 0.5MB
 
 == Build Profile ==
-
 Speed Treshold: 2m
 Size Threshold: 1MB - 2MB
 
 Total Bundle Size: 1.5MB
-Total Time To Build: 1.56MB
+Total Time To Build: 1.56 minutes
 
 == Final Status == 
-Success (within threshold)
+Success (all metrics within threshold)
 ```
 
 ## Options
