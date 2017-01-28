@@ -1,12 +1,14 @@
 'use strict';
 
-const OFFSET = 4;
+class MyOffsetClass {
 
-function myFunction (offset) {
-  // console.log('test');
-  let x = 2;
+  constructor() {
+    this.offset = 4;
+  };
 
-  return x + offset;
+  calcOffset(offset) {
+    return isNaN(offset) ? this.offset : offset;
+  }
 }
 
-myFunction(OFFSET);
+module.exports = MyOffsetClass;
