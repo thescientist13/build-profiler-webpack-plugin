@@ -1,14 +1,10 @@
 'use strict';
 
-class MyOffsetClass {
+class BuildProfilerPlugin {
 
-  constructor() {
-    this.offset = 4;
-  }
+  constructor() {}
 
-  calcOffset(offset) {
-    return isNaN(offset) ? this.offset : offset;
-  }
+  apply(compiler) {}
 }
 
-module.exports = MyOffsetClass;
+module.exports = BuildProfilerPlugin;

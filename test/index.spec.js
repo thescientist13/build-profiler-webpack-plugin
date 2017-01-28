@@ -1,15 +1,19 @@
 import test from 'ava';
-import MyOffsetClass from '../src/index';
+import BuildProfilerPlugin from '../src/index';
 
-test('MyOffsetClass returns default value of 4', t => {
-  const offset = new MyOffsetClass().calcOffset();
 
-  t.deepEqual(4, offset);
-});
+/*
+ * what would be a good POC?
+ * 1. get build stats from webpack compilation and assert it is within a certain range
+ * 2. get build stats from webpack compilation and assert it is within a certain range
+ *
+ * Notes:
+ * - need a fixture for this, or can we just test the class first, eg. it has the apply method
+ *
+ */
 
-test('MyOffsetClass returns provided value of 10', t => {
-  const customValue = 10;
-  const offset = new MyOffsetClass().calcOffset(customValue);
+test('BuildProfilerPlugin has a required `apply` method', t => {
+  const hasRequiredFunction = typeof BuildProfilerPlugin.apply === 'function';
 
-  t.deepEqual(customValue, offset);
+  t.true(hasRequiredFunction);
 });
