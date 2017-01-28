@@ -1,8 +1,9 @@
+const path = require('path');
 const BuildProfilerPlugin = require('../../../src/index');
 
 module.exports = {
   entry: {
-    app: __dirname + '/index.js'
+    app: path.join(__dirname, 'index.js')
   },
 
   output: {
