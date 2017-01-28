@@ -5,10 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "build": "rimraf ./dist && npm run lint && npm run test && npm run transpile",
-    "develop": "ava ./test/*.spec.js --source ./src/*.js --watch -v",
-    "lint": "eslint -c ./node_modules/pipeline-validate-js/.eslintrc --parser-options=ecmaVersion:6 src/index.js",
+    "develop": "ava ./test/**/*.spec.js --source ./src/*.js --watch -v",
+    "lint": "eslint -c ./node_modules/pipeline-validate-js/.eslintrc --parser-options=ecmaVersion:6,sourceType:module src/*.js test/**/*.js",
     "transpile": "babel src --out-dir dist",
-    "test": "rimraf ./coverage && rimraf ./.nyc_output && nyc ava test/*.spec.js -v && nyc report --reporter=cobertura"
+    "test": "rimraf ./coverage && rimraf ./.nyc_output && nyc ava test/**/*.spec.js -v && nyc report --reporter=cobertura"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
     "eslint": "3.14.1",
     "nyc": "10.1.2",
     "pipeline-validate-js": "1.0.1",
-    "rimraf": "2.5.4"
+    "rimraf": "2.5.4",
+    "webpack": "1.14.0"
   }
 }
