@@ -7,7 +7,7 @@ module.exports = {
   },
 
   output: {
-    path: './dest/'
+    path: './build/'
   },
 
   plugins: [

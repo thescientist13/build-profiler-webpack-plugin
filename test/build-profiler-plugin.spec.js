@@ -21,7 +21,7 @@ test('BuildProfilerPlugin.isAcceptableDuration returns true when within the tres
   t.true(isAcceptableDuration);
 });
 
-test('BuildProfilerPlugin.isAcceptableDuration returns false when not the treshold', t => {
+test('BuildProfilerPlugin.isAcceptableDuration returns false when not within the treshold', t => {
   let startTime = new Date().getTime();
   let endTime = startTime + 5000;
   let isAcceptableDuration = new BuildProfilerPlugin().isAcceptableDuration(startTime, endTime);

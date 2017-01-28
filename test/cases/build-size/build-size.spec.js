@@ -4,7 +4,7 @@ import webpackConfig from './webpack.config';
 
 // TODO test RuntimeError when build take too long
 
-test.cb('BuildProfilerPlugin passes when build takes the expected duration', t => {
+test.cb('BuildProfilerPlugin passes when the build takes the expected duration', t => {
 
   webpack(webpackConfig, function(err, stats) {
 

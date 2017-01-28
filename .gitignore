@@ -1,7 +1,7 @@
 .idea/
 .nyc_output/
 npm-debug.log
+build/
 coverage/
-dest/
 dist/
 node_modules/
