@@ -1,7 +1,7 @@
 {
-  "name": "webpack-build-profiler",
+  "name": "build-profiler-webpack-plugin",
   "version": "0.0.1",
-  "description": "A Webpack plugin for getting useful statistics of your build, with threshold and failure options",
+  "description": "A Webpack plugin for getting useful statistics of your build with threshold and failure options",
   "main": "src/index.js",
   "scripts": {
     "build": "rimraf ./dist && npm run lint && npm run test && npm run transpile",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thescientist13/webpack-build-profiler.git"
+    "url": "git+https://github.com/thescientist13/build-profiler-webpack-plugin.git"
   },
   "keywords": [
     "Webpack",
@@ -26,9 +26,9 @@
   "author": "Owen Buckley <owen@analogstudios.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thescientist13/webpack-build-profiler/issues"
+    "url": "https://github.com/thescientist13/build-profiler-webpack-plugin/issues"
   },
-  "homepage": "https://github.com/thescientist13/webpack-build-profiler#readme",
+  "homepage": "https://github.com/thescientist13/build-profiler-webpack-plugin#README.md",
   "devDependencies": {
     "ava": "0.17.0",
     "babel-cli": "6.22.2",
