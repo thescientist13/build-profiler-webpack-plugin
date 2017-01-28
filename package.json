@@ -22,7 +22,7 @@
   },
   "engineStrict": true,
   "author": "Owen Buckley <owen@analogstudios.net>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/thescientist13/webpack-build-profiler/issues"
   },
