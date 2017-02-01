@@ -1,4 +1,4 @@
-# webpack-build-profiler
+# build-profiler-webpack-plugin
 
 ## Overview
 A Webpack plugin for getting useful statistics and feedback of your build with threshold and failure options.  The advantage being that this plugin will profile your build so that you can be alerted to issues / mistakes in a Webpack configuration like:
