@@ -1,14 +1,16 @@
 import BuildProfilerPlugin from '../src/index';
 import test from 'ava';
 
+const TYPE_OF_FUNCTION = 'function';
+
 test('BuildProfilerPlugin has the required `apply` method', t => {
-  let hasRequiredFunction = typeof BuildProfilerPlugin.apply === 'function';
+  let hasRequiredFunction = typeof new BuildProfilerPlugin().apply === TYPE_OF_FUNCTION;
 
   t.true(hasRequiredFunction);
 });
 
 test('BuildProfilerPlugin has the required `isAcceptableDuration` method', t => {
-  let hasRequiredFunction = typeof new BuildProfilerPlugin().isAcceptableDuration === 'function';
+  let hasRequiredFunction = typeof new BuildProfilerPlugin().isAcceptableDuration === TYPE_OF_FUNCTION;
 
   t.true(hasRequiredFunction);
 });

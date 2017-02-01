@@ -1,8 +1,7 @@
+// import sleep from 'sleep';
 import test from 'ava';
 import webpack from 'webpack';
 import webpackConfig from './webpack.config';
-
-// TODO test RuntimeError when build take too long
 
 test.cb('BuildProfilerPlugin passes when the build takes the expected duration', t => {
 
@@ -19,3 +18,16 @@ test.cb('BuildProfilerPlugin passes when the build takes the expected duration',
   });
 
 });
+
+// TODO get this test to pass
+// test.cb('BuildProfilerPlugin throws an exception when the build takes longer than the expected duration', t => {
+//   sleep.sleep(3);
+//
+//   t.throws(
+//     () => webpack(webpackConfig),
+//     Error('Build took too long!')
+//   );
+//
+//   t.end();
+//
+// });

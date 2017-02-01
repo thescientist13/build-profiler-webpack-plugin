@@ -10,7 +10,7 @@ class BuildProfilerPlugin {
     compiler.plugin('done', (compilation) => {
 
       if (!this.isAcceptableDuration(compilation.startTime, compilation.endTime)) {
-        throw new RuntimeError('Build took too long!');
+        throw new Error('Build took too long!');
       }
 
     });

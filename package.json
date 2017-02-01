@@ -37,6 +37,7 @@
     "nyc": "10.1.2",
     "pipeline-validate-js": "1.0.2",
     "rimraf": "2.5.4",
+    "sleep": "5.1.0",
     "webpack": "1.14.0"
   }
 }
