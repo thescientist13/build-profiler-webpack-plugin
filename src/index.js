@@ -1,14 +1,20 @@
-'use strict';
+class BuildProfilerPlugin {
 
-class MyOffsetClass {
+  constructor() {}
 
-  constructor() {
-    this.offset = 4;
+  isAcceptableDuration(startTime, endTime) {
+    return (endTime - startTime) < 1000;
   }
 
-  calcOffset(offset) {
-    return isNaN(offset) ? this.offset : offset;
+  apply(compiler) {
+    compiler.plugin('done', (compilation) => {
+
+      if (!this.isAcceptableDuration(compilation.startTime, compilation.endTime)) {
+        throw new Error('Build took too long!');
+      }
+
+    });
   }
 }
 
-module.exports = MyOffsetClass;
+module.exports = BuildProfilerPlugin;
