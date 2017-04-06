@@ -1,18 +1,22 @@
 {
-  "name": "webpack-build-profiler",
+  "name": "build-profiler-webpack-plugin",
   "version": "0.0.1",
-  "description": "A Webpack plugin for getting useful statistics of your build, with threshold and failure options",
+  "description": "A Webpack plugin for getting useful statistics of your build with threshold and failure options",
   "main": "src/index.js",
   "scripts": {
     "build": "rimraf ./dist && npm run lint && npm run test && npm run transpile",
-    "develop": "ava ./test/*.spec.js --source ./src/*.js --watch -v",
-    "lint": "eslint -c ./node_modules/pipeline-validate-js/.eslintrc --parser-options=ecmaVersion:6 src/index.js",
+    "develop": "ava ./test/**/*.spec.js --source ./src/*.js --watch -v",
+    "lint": "eslint -c ./node_modules/pipeline-validate-js/.eslintrc --parser-options=ecmaVersion:6,sourceType:module src/*.js test/**/*.js",
     "transpile": "babel src --out-dir dist",
-    "test": "rimraf ./coverage && rimraf ./.nyc_output && nyc ava test/*.spec.js -v && nyc report --reporter=cobertura"
+    "test": "rimraf ./coverage && rimraf ./.nyc_output && nyc ava test/**/*.spec.js -v && nyc report --reporter=cobertura"
+  },
+  "author": {
+    "name": "Owen Buckley",
+    "email": "owen.buckley@analogstudios.net"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thescientist13/webpack-build-profiler.git"
+    "url": "git+https://github.com/thescientist13/build-profiler-webpack-plugin.git"
   },
   "keywords": [
     "Webpack",
@@ -26,16 +30,18 @@
   "author": "Owen Buckley <owen@analogstudios.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thescientist13/webpack-build-profiler/issues"
+    "url": "https://github.com/thescientist13/build-profiler-webpack-plugin/issues"
   },
-  "homepage": "https://github.com/thescientist13/webpack-build-profiler#readme",
+  "homepage": "https://github.com/thescientist13/build-profiler-webpack-plugin#README.md",
   "devDependencies": {
     "ava": "0.17.0",
     "babel-cli": "6.22.2",
     "babel-preset-es2015": "6.22.0",
     "eslint": "3.14.1",
     "nyc": "10.1.2",
-    "pipeline-validate-js": "1.0.1",
-    "rimraf": "2.5.4"
+    "pipeline-validate-js": "1.0.2",
+    "rimraf": "2.5.4",
+    "sleep": "5.1.0",
+    "webpack": "1.14.0"
   }
 }
