@@ -10,6 +10,10 @@
     "transpile": "babel src --out-dir dist",
     "test": "rimraf ./coverage && rimraf ./.nyc_output && nyc ava test/*.spec.js -v && nyc report --reporter=cobertura"
   },
+  "author": {
+    "name": "Owen Buckley",
+    "email": "owen.buckley@analogstudios.net"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thescientist13/webpack-build-profiler.git"
